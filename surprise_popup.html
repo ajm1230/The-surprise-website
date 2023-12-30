@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to My Surprise</title>
+    <style>
+        /* Style for the modal */
+        #myModal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background: linear-gradient(to right, #87CEEB, #FFD700, #8A2BE2); /* Light green, orange, and blue-violet gradient background */
+        }
+
+        /* Style for the modal content */
+        #modalContent {
+            background-color: #f0f0f0; /* Light gray content background */
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            text-align: center;
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+        }
+
+        /* Style for the surprise message */
+        #surpriseMessage {
+            color: #ff5733; /* Orange text color */
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        /* Style for the continue button */
+        #continueButton {
+            background-color: #4CAF50; /* Green button color */
+            color: white; /* White text color */
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Add hover effect to the continue button */
+        #continueButton:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<!-- The Modal -->
+<div id="myModal">
+    <!-- Modal content -->
+    <div id="modalContent">
+        <p id="surpriseMessage">🎉 You have get a surprise! 🎉</p>
+        <p>Get ready for an exciting Surprise.</p>
+        <!-- You can add gifs or emojis here for more surprise -->
+        <button id="continueButton" onclick="redirectToSurprisePage()">Get Surprise</button>
+    </div>
+</div>
+
+<script>
+    // Show the modal after 3 seconds
+    setTimeout(function() {
+        showSurpriseModal();
+    }, 3000);
+
+    function showSurpriseModal() {
+        // Display the modal
+        document.getElementById('myModal').style.display = 'block';
+    }
+
+    function hideSurpriseModal() {
+        // Hide the modal
+        document.getElementById('myModal').style.display = 'none';
+    }
+
+    function redirectToSurprisePage() {
+        // Replace 'your_surprise_page.html' with the actual URL of your surprise page
+        window.location.href = 'enforsurprise.html';
+    }
+</script>
+
+</body>
+</html>

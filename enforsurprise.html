@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to a World of Surprises</title>
+    <style>
+        /* Style for the modal */
+        #myModal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background: linear-gradient(to right, #98fb98, #ffa07a, #8a2be2, #ee82ee, #ff4500); /* Mix of light green, orange, blue-violet, violet, and orange-red gradient background */
+        }
+
+        /* Style for the modal content */
+        #modalContent {
+            background-color: #f0f0f0; /* Light gray content background */
+            margin: 15% auto;
+            padding: 20px;
+            border: 2px solid #ff8c00; /* Dark Orange border */
+            width: 80%;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Style for the input field */
+        #nameInput {
+            width: 60%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 2px solid #ff4500; /* OrangeRed border */
+            border-radius: 5px;
+        }
+
+        /* Style for the submit button */
+        #submitButton {
+            background-color: #ff4500; /* OrangeRed button color */
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Add hover effect to the submit button */
+        #submitButton:hover {
+            background-color: #d43f00; /* Darker OrangeRed color */
+        }
+
+        /* Style for the surprise message */
+        #surpriseMessage {
+            color: #ff8c00; /* Dark Orange text color */
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- The Modal -->
+<div id="myModal">
+    <!-- Modal content -->
+    <div id="modalContent">
+        <p id="surpriseMessage">🥳🎉🎁 Welcome to a World of Surprises! 🎉🥳🎁</p>
+        <label for="nameInput">Enter Your Name:</label>
+        <input type="text" id="nameInput" placeholder="Your Name">
+        <br>
+        <button id="submitButton" onclick="submitName()">Submit</button>
+    </div>
+</div>
+
+<script>
+    // Show the modal after 1.5 seconds
+    setTimeout(function() {
+        showPopupModal();
+    }, 1500);
+
+    function showPopupModal() {
+        // Display the modal
+        document.getElementById('myModal').style.display = 'block';
+    }
+
+    function hidePopupModal() {
+        // Hide the modal
+        document.getElementById('myModal').style.display = 'none';
+    }
+
+    function createSurprisePage(name) {
+        // Create a surprise page with personalized greeting
+        var surprisePage = document.createElement('div');
+        surprisePage.innerHTML = `
+            <h2>Surprise for ${name}</h2>
+            <p>This is a personalized surprise for you, ${name}! 🎉</p>
+            <!-- Add more content as needed -->
+        `;
+        document.body.appendChild(surprisePage);
+    }
+
+    function submitName() {
+        // Get the entered name from the input field
+        var enteredName = document.getElementById('nameInput').value.toLowerCase();
+
+        // Redirect based on the entered name
+        switch (enteredName) {
+            case 'prabhat':
+                window.location.href = 'surprise-persons/surpriseforprabhat.html';
+                break;
+            case 'shivanshu':
+                window.location.href = 'surprise-persons/surpriseforshivanshu.html';
+                break;
+            case 'asfar':
+                window.location.href = 'surprise-persons/surpriseforasfar.html';
+                break;
+            case 'ajmal':
+                window.location.href = 'surprise-persons/surpriseforajmal.html';
+                break;
+            case 'kamil':
+                window.location.href = 'surprise-persons/surpriseforkamil.html';
+                break;
+            case 'injamam':
+                window.location.href = 'surprise-persons/surpriseforinjamam.html';
+                break;
+            case 'natika':
+                window.location.href = 'surprise-persons/surprisefornatika.html';
+                break;
+            case 'tabinda':
+                window.location.href = 'surprise-persons/surprisefortabinda.html';
+                break;
+            case 'tassrroon':
+                window.location.href = 'surprise-persons/surprisefortassrroon.html';
+                break;
+            case 'harsh':
+                window.location.href = 'surprise-persons/surpriseforharsh.html';
+                break;
+            case 'akash':
+                window.location.href = 'surprise-persons/surpriseforakash.html';
+                break;
+            case 'sunakshi':
+                window.location.href = 'surprise-persons/surpriseforsunakshi.html';
+                break;
+            case 'prince':
+                window.location.href = 'surprise-persons/surpriseforprince.html';
+                break;
+            default:
+                // If the entered name doesn't match, create a surprise page for the name
+                createSurprisePage(enteredName);
+        }
+    }
+</script>
+
+</body>
+</html>

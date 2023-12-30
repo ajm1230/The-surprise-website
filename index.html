@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Surprise Website</title>
+    <style>
+        /* Style for the main content */
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #8a2be2, #ffa500, #87ceeb, #4caf50); /* Blue-violet, orange, sky blue, and green gradient background */
+            margin: 0;
+            padding: 0;
+            font-size: 20px;
+            font-weight: bolder;
+            font-style: Arial;
+            text-align: center;
+            color: rgb(0, 0, 0); /* White text color */
+        }
+
+        /* Style for the header */
+        header {
+            background: linear-gradient(to right, #90ee90, #8a2be2); /* Light green and blue-violet gradient for header */
+            color: rgb(236, 107, 21); /* White text color */
+            padding: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        /* Style for the main section */
+        section {
+            padding: 20px;
+        }
+
+        /* Style for the button */
+        #startButton {
+            background-color: #ff4500; /* OrangeRed button color */
+            color: white; /* White text color */
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Add hover effect to the button */
+        #startButton:hover {
+            background-color: #d43f00; /* Darker OrangeRed color */
+        }
+
+        /* Style for the surprise elements */
+        .surprise-elements {
+            margin-top: 30px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        /* Style for the surprise text */
+        .surprise-text {
+            font-size: 20px;
+            margin-top: 10px;
+        }
+
+        /* Style for the big colorful text */
+        .big-colorful-text {
+            font-size: 50px; /* Increased font size to 50px */
+            font-weight: bold;
+            margin-top: 20px;
+            color: #008000; /* Updated to a different green text color */
+        }
+
+        /* Override violet color to green for the entire big colorful text */
+        .big-colorful-text {
+            color: #008000;
+        }
+        /* Style for the modal */
+    #myModal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        font-style: arial;
+        height: 100%;
+        overflow: auto;
+        color: black;
+        font-size: 20px;
+        background: linear-gradient(to right, #87CEEB, #FFD700, #8A2BE2); /* Light green, orange, and blue-violet gradient background */
+
+    }
+
+    /* Style for the modal content */
+    #modalContent {
+        background-color: #f0f0f0; /* Light gray content background */
+        margin: 15% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+        text-align: center;
+        border-radius: 10px; /* Rounded corners */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    }
+
+    /* Style for the surprise message */
+    #surpriseMessage {
+        color: #ff5733; /* Orange text color */
+        font-size: 24px;
+        margin-bottom: 15px;
+        font-weight: bolder;
+        font-style: Arial;
+    }
+
+    /* Style for the continue button */
+    #continueButton {
+        background-color: #4CAF50; /* Green button color */
+        color: white; /* White text color */
+        padding: 10px 20px;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    /* Add hover effect to the continue button */
+    #continueButton:hover {
+        background-color: #45a049;
+    }
+    </style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+    <h1>Welcome to The Surprise Website</h1>
+</header>
+
+<!-- Main Content -->
+<section>
+    <p>The most interesting surprise is Our Smile.</p>
+    <p>Click the button below to explore and discover the joy!</p>
+    <button id="startButton" onclick="redirectToSurprisePopup()">Get Started</button>
+
+    <!-- Surprise Elements -->
+    <div class="surprise-elements">
+        <!-- Add images, gifs, emojis, and more surprise elements here by AI -->
+        <!-- Example: <img src="your_image_url.jpg" alt="Surprise Image"> -->
+        <!-- Example: <span>🎉</span> -->
+        <div>🌈</div>
+        <div>😃</div>
+        <div>🎁</div>
+        <div>🎊</div>
+        <div>🌟</div>
+    </div>
+
+    <!-- Surprise Text -->
+    <div class="surprise-text">
+        Discover the magic of surprises that brings smiles to our faces!
+    </div>
+
+    <!-- Big Colorful Text -->
+    <div class="big-colorful-text">
+        Please smile once.
+    </div>
+</section>
+
+<script>
+    function redirectToSurprisePopup() {
+        // Replace 'surprise_popup.html' with the actual URL of your surprise popup page
+        window.location.href = 'surprise_popup.html';
+    }
+</script>
+
+<!-- The Modal -->
+<div id="myModal">
+<!-- Modal content -->
+<div id="modalContent">
+    <p id="surpriseMessage">🎉 You have get a surprise! 🎉</p>
+    <p>Get ready for an exciting Surprise.</p>
+    <!-- You can add gifs or emojis here for more surprise -->
+    <button id="continueButton" onclick="redirectToSurprisePage()">Get Surprise</button>
+</div>
+</div>
+
+<script>
+// Show the modal after 5 seconds
+setTimeout(function() {
+    showSurpriseModal();
+}, 4000);
+
+function showSurpriseModal() {
+    // Display the modal
+    document.getElementById('myModal').style.display = 'block';
+}
+
+function hideSurpriseModal() {
+    // Hide the modal
+    document.getElementById('myModal').style.display = 'none';
+}
+
+function redirectToSurprisePage() {
+    // Replace 'your_surprise_page.html' with the actual URL of your surprise page
+    window.location.href = 'enforsurprise.html';
+}
+</script>
+
+</body>
+</html>
